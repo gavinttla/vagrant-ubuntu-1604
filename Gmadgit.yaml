@@ -1,0 +1,35 @@
+---
+ip: "192.168.56.10"
+memory: 4096
+cpus: 2
+provider: virtualbox
+
+
+authorize: C:/Users/gbcui/.ssh/id_rsa.pub
+
+keys:
+    - C:/Users/gbcui/.ssh/id_rsa
+
+folders:
+    - map: z:/gmadgit
+      to: /home/gbcui/code
+
+sites:
+    - map: gmadgit.test
+      to: /home/vagrant/code/public
+
+databases:
+    - gmadgit
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp
